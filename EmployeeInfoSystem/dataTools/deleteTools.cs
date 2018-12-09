@@ -46,7 +46,7 @@ namespace EmployeeInfoSystem.dataTools
             {
                 using (employeeInfoSystemEntities db = new employeeInfoSystemEntities())
                 {
-                    DbQuery<department> dbDelete = db.department.Where(department) as DbQuery<department>;
+                    DbQuery<department> dbDelete = db.department.Where(whereLambda) as DbQuery<department>;
                     List<department> obDelete = dbDelete.ToList();
                     db.department.RemoveRange(obDelete);
                     db.SaveChanges();
@@ -143,7 +143,26 @@ namespace EmployeeInfoSystem.dataTools
         /// <returns></returns>
         public static bool deleteCompanyPositionInfo(int departmentId)
         {
-            //先删除公司部门旗下的所有职务
+            try
+            {
+                //先删除公司部门旗下的所有职务
+                bool flag1 = false;
+                flag1 = deleteCompanyPosition(u => u.departmentId == departmentId);
+                if (flag1 == true)
+                {
+                    bool flag2 = false;
+                    flag2 = deleteDepartment(u => u.departmentId == departmentId);
+                    return flag2;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

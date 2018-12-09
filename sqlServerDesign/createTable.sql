@@ -59,7 +59,7 @@ GO
 CREATE TABLE employeePerformance
 (
 		employeeId INT PRIMARY KEY,	--职工编号
-		positionName NVARCHAR(30) NOT NULL,	--职位名称
+		positionId NVARCHAR(30) NOT NULL,	--职位编号
 		performance FLOAT NULL,	--业绩（按月表示。例：10000，表示一个月为公司创造的价值是10000元）
 ) 
 GO
