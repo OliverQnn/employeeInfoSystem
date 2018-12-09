@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="employeeInfoSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="companyPosition">
+          <Key>
+            <PropertyRef Name="positionId" />
+          </Key>
+          <Property Name="positionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="departmentId" Type="int" Nullable="false" />
+          <Property Name="positionName" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="positionSalary" Type="float" />
+        </EntityType>
+        <EntityType Name="department">
+          <Key>
+            <PropertyRef Name="departmentId" />
+          </Key>
+          <Property Name="departmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="departmentName" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="employeeInfo">
+          <Key>
+            <PropertyRef Name="employeeId" />
+          </Key>
+          <Property Name="employeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="employeeName" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="employeeSex" Type="int" Nullable="false" />
+          <Property Name="employeePhone" Type="int" Nullable="false" />
+          <Property Name="employeeBir" Type="datetime" />
+          <Property Name="employeeIdentity" Type="nvarchar" MaxLength="18" Nullable="false" />
+        </EntityType>
+        <EntityType Name="employeePerformance">
+          <Key>
+            <PropertyRef Name="employeeId" />
+          </Key>
+          <Property Name="employeeId" Type="int" Nullable="false" />
+          <Property Name="positionId" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="performance" Type="float" />
+        </EntityType>
+        <EntityContainer Name="employeeInfoSystemModelStoreContainer">
+          <EntitySet Name="companyPosition" EntityType="Self.companyPosition" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="department" EntityType="Self.department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="employeeInfo" EntityType="Self.employeeInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="employeePerformance" EntityType="Self.employeePerformance" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="employeeInfoSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="companyPosition">
+          <Key>
+            <PropertyRef Name="positionId" />
+          </Key>
+          <Property Name="positionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="departmentId" Type="Int32" Nullable="false" />
+          <Property Name="positionName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="positionSalary" Type="Double" />
+        </EntityType>
+        <EntityType Name="department">
+          <Key>
+            <PropertyRef Name="departmentId" />
+          </Key>
+          <Property Name="departmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="departmentName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="employeeInfo">
+          <Key>
+            <PropertyRef Name="employeeId" />
+          </Key>
+          <Property Name="employeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="employeeName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="employeeSex" Type="Int32" Nullable="false" />
+          <Property Name="employeePhone" Type="Int32" Nullable="false" />
+          <Property Name="employeeBir" Type="DateTime" Precision="3" />
+          <Property Name="employeeIdentity" Type="String" MaxLength="18" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="employeePerformance">
+          <Key>
+            <PropertyRef Name="employeeId" />
+          </Key>
+          <Property Name="employeeId" Type="Int32" Nullable="false" />
+          <Property Name="positionId" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="performance" Type="Double" />
+        </EntityType>
+        <EntityContainer Name="employeeInfoSystemEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="companyPosition" EntityType="Self.companyPosition" />
+          <EntitySet Name="department" EntityType="Self.department" />
+          <EntitySet Name="employeeInfo" EntityType="Self.employeeInfo" />
+          <EntitySet Name="employeePerformance" EntityType="Self.employeePerformance" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="employeeInfoSystemModelStoreContainer" CdmEntityContainer="employeeInfoSystemEntities">
+          <EntitySetMapping Name="companyPosition">
+            <EntityTypeMapping TypeName="employeeInfoSystemModel.companyPosition">
+              <MappingFragment StoreEntitySet="companyPosition">
+                <ScalarProperty Name="positionId" ColumnName="positionId" />
+                <ScalarProperty Name="departmentId" ColumnName="departmentId" />
+                <ScalarProperty Name="positionName" ColumnName="positionName" />
+                <ScalarProperty Name="positionSalary" ColumnName="positionSalary" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="department">
+            <EntityTypeMapping TypeName="employeeInfoSystemModel.department">
+              <MappingFragment StoreEntitySet="department">
+                <ScalarProperty Name="departmentId" ColumnName="departmentId" />
+                <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="employeeInfo">
+            <EntityTypeMapping TypeName="employeeInfoSystemModel.employeeInfo">
+              <MappingFragment StoreEntitySet="employeeInfo">
+                <ScalarProperty Name="employeeId" ColumnName="employeeId" />
+                <ScalarProperty Name="employeeName" ColumnName="employeeName" />
+                <ScalarProperty Name="employeeSex" ColumnName="employeeSex" />
+                <ScalarProperty Name="employeePhone" ColumnName="employeePhone" />
+                <ScalarProperty Name="employeeBir" ColumnName="employeeBir" />
+                <ScalarProperty Name="employeeIdentity" ColumnName="employeeIdentity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="employeePerformance">
+            <EntityTypeMapping TypeName="employeeInfoSystemModel.employeePerformance">
+              <MappingFragment StoreEntitySet="employeePerformance">
+                <ScalarProperty Name="employeeId" ColumnName="employeeId" />
+                <ScalarProperty Name="positionId" ColumnName="positionId" />
+                <ScalarProperty Name="performance" ColumnName="performance" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
