@@ -86,7 +86,7 @@ namespace EmployeeInfoSystem.dataTools
         }
 
         /// <summary>
-        /// 查找公司职务信息
+        /// 查找公司就职信息
         /// </summary>
         /// <typeparam name="TKey"></typeparam>
         /// <param name="whereLambda"></param>

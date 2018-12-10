@@ -21,7 +21,7 @@ CREATE TABLE employeeInfo
 		employeeId INT PRIMARY KEY IDENTITY(1, 1),	--职工ID，自增长1
 		employeeName NVARCHAR(30)NOT NULL,	--职工姓名
 		employeeSex INT NOT NULL,	--职工性别	0女1男
-		employeePhone INT NOT NULL,	--职工电话
+		employeePhone NVARCHAR(11) NOT NULL,	--职工电话
 		employeeBir DATETIME NULL,	--职工生日
 		employeeIdentity NVARCHAR(18) NOT NULL UNIQUE,	--职工身份证编号，唯一
 )
@@ -59,7 +59,7 @@ GO
 CREATE TABLE employeePerformance
 (
 		employeeId INT PRIMARY KEY,	--职工编号
-		positionId NVARCHAR(30) NOT NULL,	--职位编号
+		positionId INT NOT NULL,	--职位编号
 		performance FLOAT NULL,	--业绩（按月表示。例：10000，表示一个月为公司创造的价值是10000元）
 ) 
 GO
