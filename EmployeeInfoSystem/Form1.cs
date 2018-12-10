@@ -377,7 +377,7 @@ namespace EmployeeInfoSystem
             companyPosition pos = new companyPosition()
             {
                 departmentId = int.Parse(nudPosDepId.Value.ToString()),
-                positionSalary = int.Parse(nudPosMoney.Value.ToString()),
+                positionSalary = double.Parse(nudPosMoney.Value.ToString()),
                 positionName = txtPosName.Text
             };
             if (dataTools.insertTools.insertCompanyPosition(pos) == false)
@@ -592,24 +592,19 @@ namespace EmployeeInfoSystem
             //职工Id
             if (cboxPerSearchId.Checked == true)
             {
-                if (Convert.ToInt32(nudPerSearchId.Value) != 0)
-                {
-                    expression = LambdaHelper.And<employeePerformance>(expression, x => x.employeeId == nudPerSearchId.Value);
-                }
+                expression = LambdaHelper.And<employeePerformance>(expression, x => x.employeeId == nudPerSearchId.Value);
             }
             //职位Id
             if (cboxPerSearchPosId.Checked == true)
             {
                 //name的值可能为空 所以要判断
-                if (Convert.ToInt32(nudPosSearchId.Value) != 0)
-                {
-                    expression = LambdaHelper.And<employeePerformance>(expression, x => x.positionId == nudPosSearchId.Value);
-                }
+                expression = LambdaHelper.And<employeePerformance>(expression, x => x.positionId == nudPosSearchId.Value);
             }
             //业绩
             if (cboxPerSearchPerformance.Checked == true)
             {
-                expression = LambdaHelper.And<employeePerformance>(expression, x => x.performance == Convert.ToDouble(nudPerSearchPerformance.Value));
+                double pNumber = Convert.ToDouble(nudPerSearchPerformance.Value);
+                expression = LambdaHelper.And<employeePerformance>(expression, x => x.performance == pNumber);
             }
 
             employeePerformance[] info = dataTools.selectTools.selectEmployeePerformance(expression, x => x.employeeId);

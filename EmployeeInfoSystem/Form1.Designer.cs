@@ -144,8 +144,8 @@
             this.label26 = new System.Windows.Forms.Label();
             this.Performance = new System.Windows.Forms.ListView();
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
@@ -1215,9 +1215,9 @@
             this.tabEmployeePerformance.Controls.Add(this.groupBox7);
             this.tabEmployeePerformance.Controls.Add(this.groupBox8);
             this.tabEmployeePerformance.Controls.Add(this.Performance);
-            this.tabEmployeePerformance.Location = new System.Drawing.Point(4, 22);
+            this.tabEmployeePerformance.Location = new System.Drawing.Point(4, 26);
             this.tabEmployeePerformance.Name = "tabEmployeePerformance";
-            this.tabEmployeePerformance.Size = new System.Drawing.Size(1121, 471);
+            this.tabEmployeePerformance.Size = new System.Drawing.Size(1121, 467);
             this.tabEmployeePerformance.TabIndex = 3;
             this.tabEmployeePerformance.Text = "公司就职信息";
             this.tabEmployeePerformance.UseVisualStyleBackColor = true;
@@ -1240,7 +1240,6 @@
             // 
             // nudPerSearchPerformance
             // 
-            this.nudPerSearchPerformance.DecimalPlaces = 2;
             this.nudPerSearchPerformance.Increment = new decimal(new int[] {
             5,
             0,
@@ -1341,12 +1340,6 @@
             // 
             // nudPerPerformance
             // 
-            this.nudPerPerformance.DecimalPlaces = 2;
-            this.nudPerPerformance.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
             this.nudPerPerformance.Location = new System.Drawing.Point(78, 147);
             this.nudPerPerformance.Maximum = new decimal(new int[] {
             1410065407,
@@ -1473,14 +1466,14 @@
             // 
             this.columnHeader13.Text = "职工ID";
             // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "职工姓名";
+            // 
             // columnHeader14
             // 
             this.columnHeader14.Text = "职位编号";
             this.columnHeader14.Width = 78;
-            // 
-            // columnHeader16
-            // 
-            this.columnHeader16.Text = "职工姓名";
             // 
             // columnHeader17
             // 
