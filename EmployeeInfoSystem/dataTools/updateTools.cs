@@ -79,6 +79,7 @@ namespace EmployeeInfoSystem.dataTools
                 {
                     DbQuery<companyPosition> dataObject = db.companyPosition.Where(whereLambda) as DbQuery<companyPosition>;
                     companyPosition oldInfo = dataObject.FirstOrDefault();
+                    oldInfo.departmentId = info.departmentId;
                     oldInfo.positionName = info.positionName;
                     oldInfo.positionSalary = info.positionSalary;
                     db.SaveChanges();

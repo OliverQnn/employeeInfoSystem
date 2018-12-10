@@ -788,6 +788,7 @@
             this.btnDepSearch.TabIndex = 32;
             this.btnDepSearch.Text = "查询";
             this.btnDepSearch.UseVisualStyleBackColor = true;
+            this.btnDepSearch.Click += new System.EventHandler(this.btnDepSearch_Click);
             // 
             // txtDepSearchName
             // 
@@ -851,6 +852,7 @@
             this.btnDepDelete.TabIndex = 20;
             this.btnDepDelete.Text = "删除选中项";
             this.btnDepDelete.UseVisualStyleBackColor = true;
+            this.btnDepDelete.Click += new System.EventHandler(this.btnDepDelete_Click);
             // 
             // btnDepEdit
             // 
@@ -861,6 +863,7 @@
             this.btnDepEdit.TabIndex = 19;
             this.btnDepEdit.Text = "修改选中项";
             this.btnDepEdit.UseVisualStyleBackColor = true;
+            this.btnDepEdit.Click += new System.EventHandler(this.btnDepEdit_Click);
             // 
             // btnDepLoad
             // 
@@ -871,6 +874,7 @@
             this.btnDepLoad.TabIndex = 18;
             this.btnDepLoad.Text = "加载选中项";
             this.btnDepLoad.UseVisualStyleBackColor = true;
+            this.btnDepLoad.Click += new System.EventHandler(this.btnDepLoad_Click);
             // 
             // btnDepAdd
             // 
@@ -881,6 +885,7 @@
             this.btnDepAdd.TabIndex = 11;
             this.btnDepAdd.Text = "添加";
             this.btnDepAdd.UseVisualStyleBackColor = true;
+            this.btnDepAdd.Click += new System.EventHandler(this.btnDepAdd_Click);
             // 
             // txtDepName
             // 
@@ -1015,6 +1020,7 @@
             this.btnPosSearch.TabIndex = 32;
             this.btnPosSearch.Text = "查询";
             this.btnPosSearch.UseVisualStyleBackColor = true;
+            this.btnPosSearch.Click += new System.EventHandler(this.btnPosSearch_Click);
             // 
             // cboxPosSearchName
             // 
@@ -1073,6 +1079,7 @@
             this.btnPosDelete.TabIndex = 20;
             this.btnPosDelete.Text = "删除选中项";
             this.btnPosDelete.UseVisualStyleBackColor = true;
+            this.btnPosDelete.Click += new System.EventHandler(this.btnPosDelete_Click);
             // 
             // btnPosEdit
             // 
@@ -1083,6 +1090,7 @@
             this.btnPosEdit.TabIndex = 19;
             this.btnPosEdit.Text = "修改选中项";
             this.btnPosEdit.UseVisualStyleBackColor = true;
+            this.btnPosEdit.Click += new System.EventHandler(this.btnPosEdit_Click);
             // 
             // btnPosLoad
             // 
@@ -1093,6 +1101,7 @@
             this.btnPosLoad.TabIndex = 18;
             this.btnPosLoad.Text = "加载选中项";
             this.btnPosLoad.UseVisualStyleBackColor = true;
+            this.btnPosLoad.Click += new System.EventHandler(this.btnPosLoad_Click);
             // 
             // btnPosAdd
             // 
@@ -1103,6 +1112,7 @@
             this.btnPosAdd.TabIndex = 11;
             this.btnPosAdd.Text = "添加";
             this.btnPosAdd.UseVisualStyleBackColor = true;
+            this.btnPosAdd.Click += new System.EventHandler(this.btnPosAdd_Click);
             // 
             // nudPosMoney
             // 
@@ -1203,9 +1213,9 @@
             this.tabEmployeePerformance.Controls.Add(this.groupBox7);
             this.tabEmployeePerformance.Controls.Add(this.groupBox8);
             this.tabEmployeePerformance.Controls.Add(this.Performance);
-            this.tabEmployeePerformance.Location = new System.Drawing.Point(4, 26);
+            this.tabEmployeePerformance.Location = new System.Drawing.Point(4, 22);
             this.tabEmployeePerformance.Name = "tabEmployeePerformance";
-            this.tabEmployeePerformance.Size = new System.Drawing.Size(1121, 467);
+            this.tabEmployeePerformance.Size = new System.Drawing.Size(1121, 471);
             this.tabEmployeePerformance.TabIndex = 3;
             this.tabEmployeePerformance.Text = "公司就职信息";
             this.tabEmployeePerformance.UseVisualStyleBackColor = true;
