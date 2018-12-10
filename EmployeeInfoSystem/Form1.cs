@@ -16,5 +16,15 @@ namespace EmployeeInfoSystem
         {
             InitializeComponent();
         }
+
+        private void numericUpDown4_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
