@@ -1456,8 +1456,8 @@
             // 
             this.Performance.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader13,
-            this.columnHeader14,
             this.columnHeader16,
+            this.columnHeader14,
             this.columnHeader17,
             this.columnHeader15});
             this.Performance.FullRowSelect = true;
@@ -1475,13 +1475,11 @@
             // 
             // columnHeader14
             // 
-            this.columnHeader14.DisplayIndex = 2;
             this.columnHeader14.Text = "职位编号";
             this.columnHeader14.Width = 78;
             // 
             // columnHeader16
             // 
-            this.columnHeader16.DisplayIndex = 1;
             this.columnHeader16.Text = "职工姓名";
             // 
             // columnHeader17
