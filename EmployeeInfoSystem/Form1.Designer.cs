@@ -31,12 +31,14 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabEmployeeInfo = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbtnInfoSearchFemale = new System.Windows.Forms.RadioButton();
             this.btnInfoSearch = new System.Windows.Forms.Button();
+            this.rbtnInfoSearchMale = new System.Windows.Forms.RadioButton();
             this.txtInfoSearchIdCard = new System.Windows.Forms.TextBox();
             this.txtInfoSearchTel = new System.Windows.Forms.TextBox();
             this.txtInfoSearchName = new System.Windows.Forms.TextBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cboxInfoIdCard = new System.Windows.Forms.CheckBox();
+            this.cboxInfoBirth = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cboxInfoTel = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -94,14 +96,16 @@
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabCompanyPosition = new System.Windows.Forms.TabPage();
-            this.tabEmployeePerformance = new System.Windows.Forms.TabPage();
-            this.rbtnInfoSearchFemale = new System.Windows.Forms.RadioButton();
-            this.rbtnInfoSearchMale = new System.Windows.Forms.RadioButton();
-            this.listPosition = new System.Windows.Forms.ListView();
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.cboxPosSearchMoney = new System.Windows.Forms.CheckBox();
+            this.nudPosSearchMoney = new System.Windows.Forms.NumericUpDown();
+            this.txtPosSearchName = new System.Windows.Forms.TextBox();
+            this.nudPosSearchDepId = new System.Windows.Forms.NumericUpDown();
+            this.nudPosSearchId = new System.Windows.Forms.NumericUpDown();
+            this.btnPosSearch = new System.Windows.Forms.Button();
+            this.cboxPosSearchName = new System.Windows.Forms.CheckBox();
+            this.cboxPosSearchDepId = new System.Windows.Forms.CheckBox();
+            this.cboxPosSearchId = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnPosDelete = new System.Windows.Forms.Button();
             this.btnPosEdit = new System.Windows.Forms.Button();
@@ -112,23 +116,25 @@
             this.txtPosName = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.btnPosSearch = new System.Windows.Forms.Button();
-            this.cboxPosSearchName = new System.Windows.Forms.CheckBox();
-            this.cboxPosSearchDepId = new System.Windows.Forms.CheckBox();
-            this.cboxPosSearchId = new System.Windows.Forms.CheckBox();
             this.nudPosDepId = new System.Windows.Forms.NumericUpDown();
-            this.nudPosSearchId = new System.Windows.Forms.NumericUpDown();
-            this.nudPosSearchDepId = new System.Windows.Forms.NumericUpDown();
-            this.txtPosSearchName = new System.Windows.Forms.TextBox();
-            this.nudPosSearchMoney = new System.Windows.Forms.NumericUpDown();
-            this.cboxPosSearchMoney = new System.Windows.Forms.CheckBox();
+            this.listPosition = new System.Windows.Forms.ListView();
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabEmployeePerformance = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.nudPerSearchPerformance = new System.Windows.Forms.NumericUpDown();
+            this.nudPerSearchPosId = new System.Windows.Forms.NumericUpDown();
+            this.nudPerSearchId = new System.Windows.Forms.NumericUpDown();
             this.btnPerSearch = new System.Windows.Forms.Button();
             this.cboxPerSearchPerformance = new System.Windows.Forms.CheckBox();
             this.cboxPerSearchPosId = new System.Windows.Forms.CheckBox();
             this.cboxPerSearchId = new System.Windows.Forms.CheckBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.nudPerPerformance = new System.Windows.Forms.NumericUpDown();
+            this.nudPerPosId = new System.Windows.Forms.NumericUpDown();
+            this.nudPerId = new System.Windows.Forms.NumericUpDown();
             this.btnPerDelete = new System.Windows.Forms.Button();
             this.btnPerEdit = new System.Windows.Forms.Button();
             this.btnPerLoad = new System.Windows.Forms.Button();
@@ -140,12 +146,6 @@
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.nudPerId = new System.Windows.Forms.NumericUpDown();
-            this.nudPerPosId = new System.Windows.Forms.NumericUpDown();
-            this.nudPerPerformance = new System.Windows.Forms.NumericUpDown();
-            this.nudPerSearchPerformance = new System.Windows.Forms.NumericUpDown();
-            this.nudPerSearchPosId = new System.Windows.Forms.NumericUpDown();
-            this.nudPerSearchId = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabEmployeeInfo.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -162,22 +162,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudDepSearchId)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.tabCompanyPosition.SuspendLayout();
-            this.tabEmployeePerformance.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPosSearchMoney)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPosSearchDepId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPosSearchId)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPosMoney)).BeginInit();
-            this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPosDepId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPosSearchId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPosSearchDepId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPosSearchMoney)).BeginInit();
+            this.tabEmployeePerformance.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPerId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPerPosId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPerPerformance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPerSearchPerformance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPerSearchPosId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPerSearchId)).BeginInit();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPerPerformance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPerPosId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPerId)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -213,8 +213,8 @@
             this.groupBox2.Controls.Add(this.txtInfoSearchIdCard);
             this.groupBox2.Controls.Add(this.txtInfoSearchTel);
             this.groupBox2.Controls.Add(this.txtInfoSearchName);
-            this.groupBox2.Controls.Add(this.checkBox2);
-            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Controls.Add(this.cboxInfoIdCard);
+            this.groupBox2.Controls.Add(this.cboxInfoBirth);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.cboxInfoTel);
             this.groupBox2.Controls.Add(this.label10);
@@ -233,6 +233,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "查询";
             // 
+            // rbtnInfoSearchFemale
+            // 
+            this.rbtnInfoSearchFemale.AutoSize = true;
+            this.rbtnInfoSearchFemale.Location = new System.Drawing.Point(120, 94);
+            this.rbtnInfoSearchFemale.Name = "rbtnInfoSearchFemale";
+            this.rbtnInfoSearchFemale.Size = new System.Drawing.Size(38, 21);
+            this.rbtnInfoSearchFemale.TabIndex = 22;
+            this.rbtnInfoSearchFemale.Text = "女";
+            this.rbtnInfoSearchFemale.UseVisualStyleBackColor = true;
+            // 
             // btnInfoSearch
             // 
             this.btnInfoSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -242,6 +252,19 @@
             this.btnInfoSearch.TabIndex = 32;
             this.btnInfoSearch.Text = "查询";
             this.btnInfoSearch.UseVisualStyleBackColor = true;
+            this.btnInfoSearch.Click += new System.EventHandler(this.btnInfoSearch_Click);
+            // 
+            // rbtnInfoSearchMale
+            // 
+            this.rbtnInfoSearchMale.AutoSize = true;
+            this.rbtnInfoSearchMale.Checked = true;
+            this.rbtnInfoSearchMale.Location = new System.Drawing.Point(76, 94);
+            this.rbtnInfoSearchMale.Name = "rbtnInfoSearchMale";
+            this.rbtnInfoSearchMale.Size = new System.Drawing.Size(38, 21);
+            this.rbtnInfoSearchMale.TabIndex = 21;
+            this.rbtnInfoSearchMale.TabStop = true;
+            this.rbtnInfoSearchMale.Text = "男";
+            this.rbtnInfoSearchMale.UseVisualStyleBackColor = true;
             // 
             // txtInfoSearchIdCard
             // 
@@ -264,25 +287,25 @@
             this.txtInfoSearchName.Size = new System.Drawing.Size(231, 23);
             this.txtInfoSearchName.TabIndex = 28;
             // 
-            // checkBox2
+            // cboxInfoIdCard
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(19, 187);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(63, 21);
-            this.checkBox2.TabIndex = 27;
-            this.checkBox2.Text = "身份证";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cboxInfoIdCard.AutoSize = true;
+            this.cboxInfoIdCard.Location = new System.Drawing.Point(19, 187);
+            this.cboxInfoIdCard.Name = "cboxInfoIdCard";
+            this.cboxInfoIdCard.Size = new System.Drawing.Size(63, 21);
+            this.cboxInfoIdCard.TabIndex = 27;
+            this.cboxInfoIdCard.Text = "身份证";
+            this.cboxInfoIdCard.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // cboxInfoBirth
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(19, 157);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(51, 21);
-            this.checkBox1.TabIndex = 26;
-            this.checkBox1.Text = "生日";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cboxInfoBirth.AutoSize = true;
+            this.cboxInfoBirth.Location = new System.Drawing.Point(19, 157);
+            this.cboxInfoBirth.Name = "cboxInfoBirth";
+            this.cboxInfoBirth.Size = new System.Drawing.Size(51, 21);
+            this.cboxInfoBirth.TabIndex = 26;
+            this.cboxInfoBirth.Text = "生日";
+            this.cboxInfoBirth.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -467,6 +490,7 @@
             this.btnInfoDelete.TabIndex = 20;
             this.btnInfoDelete.Text = "删除选中项";
             this.btnInfoDelete.UseVisualStyleBackColor = true;
+            this.btnInfoDelete.Click += new System.EventHandler(this.btnInfoDelete_Click);
             // 
             // btnInfoEdit
             // 
@@ -477,6 +501,7 @@
             this.btnInfoEdit.TabIndex = 19;
             this.btnInfoEdit.Text = "修改选中项";
             this.btnInfoEdit.UseVisualStyleBackColor = true;
+            this.btnInfoEdit.Click += new System.EventHandler(this.btnInfoEdit_Click);
             // 
             // btnInfoLoad
             // 
@@ -487,6 +512,7 @@
             this.btnInfoLoad.TabIndex = 18;
             this.btnInfoLoad.Text = "加载选中项";
             this.btnInfoLoad.UseVisualStyleBackColor = true;
+            this.btnInfoLoad.Click += new System.EventHandler(this.btnInfoLoad_Click);
             // 
             // btnInfoAdd
             // 
@@ -497,6 +523,7 @@
             this.btnInfoAdd.TabIndex = 11;
             this.btnInfoAdd.Text = "添加";
             this.btnInfoAdd.UseVisualStyleBackColor = true;
+            this.btnInfoAdd.Click += new System.EventHandler(this.btnInfoAdd_Click);
             // 
             // label8
             // 
@@ -691,6 +718,7 @@
             this.listInfo.FullRowSelect = true;
             this.listInfo.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listInfo.Location = new System.Drawing.Point(8, 6);
+            this.listInfo.MultiSelect = false;
             this.listInfo.Name = "listInfo";
             this.listInfo.Size = new System.Drawing.Size(556, 444);
             this.listInfo.TabIndex = 0;
@@ -907,74 +935,116 @@
             this.tabCompanyPosition.Text = "公司职务";
             this.tabCompanyPosition.UseVisualStyleBackColor = true;
             // 
-            // tabEmployeePerformance
+            // groupBox6
             // 
-            this.tabEmployeePerformance.Controls.Add(this.groupBox7);
-            this.tabEmployeePerformance.Controls.Add(this.groupBox8);
-            this.tabEmployeePerformance.Controls.Add(this.Performance);
-            this.tabEmployeePerformance.Location = new System.Drawing.Point(4, 26);
-            this.tabEmployeePerformance.Name = "tabEmployeePerformance";
-            this.tabEmployeePerformance.Size = new System.Drawing.Size(1121, 467);
-            this.tabEmployeePerformance.TabIndex = 3;
-            this.tabEmployeePerformance.Text = "公司就职信息";
-            this.tabEmployeePerformance.UseVisualStyleBackColor = true;
+            this.groupBox6.Controls.Add(this.cboxPosSearchMoney);
+            this.groupBox6.Controls.Add(this.nudPosSearchMoney);
+            this.groupBox6.Controls.Add(this.txtPosSearchName);
+            this.groupBox6.Controls.Add(this.nudPosSearchDepId);
+            this.groupBox6.Controls.Add(this.nudPosSearchId);
+            this.groupBox6.Controls.Add(this.btnPosSearch);
+            this.groupBox6.Controls.Add(this.cboxPosSearchName);
+            this.groupBox6.Controls.Add(this.cboxPosSearchDepId);
+            this.groupBox6.Controls.Add(this.cboxPosSearchId);
+            this.groupBox6.Location = new System.Drawing.Point(587, 225);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(522, 225);
+            this.groupBox6.TabIndex = 3;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "查询";
             // 
-            // rbtnInfoSearchFemale
+            // cboxPosSearchMoney
             // 
-            this.rbtnInfoSearchFemale.AutoSize = true;
-            this.rbtnInfoSearchFemale.Location = new System.Drawing.Point(120, 94);
-            this.rbtnInfoSearchFemale.Name = "rbtnInfoSearchFemale";
-            this.rbtnInfoSearchFemale.Size = new System.Drawing.Size(38, 21);
-            this.rbtnInfoSearchFemale.TabIndex = 22;
-            this.rbtnInfoSearchFemale.Text = "女";
-            this.rbtnInfoSearchFemale.UseVisualStyleBackColor = true;
+            this.cboxPosSearchMoney.AutoSize = true;
+            this.cboxPosSearchMoney.Location = new System.Drawing.Point(19, 169);
+            this.cboxPosSearchMoney.Name = "cboxPosSearchMoney";
+            this.cboxPosSearchMoney.Size = new System.Drawing.Size(51, 21);
+            this.cboxPosSearchMoney.TabIndex = 34;
+            this.cboxPosSearchMoney.Text = "薪酬";
+            this.cboxPosSearchMoney.UseVisualStyleBackColor = true;
             // 
-            // rbtnInfoSearchMale
+            // nudPosSearchMoney
             // 
-            this.rbtnInfoSearchMale.AutoSize = true;
-            this.rbtnInfoSearchMale.Checked = true;
-            this.rbtnInfoSearchMale.Location = new System.Drawing.Point(76, 94);
-            this.rbtnInfoSearchMale.Name = "rbtnInfoSearchMale";
-            this.rbtnInfoSearchMale.Size = new System.Drawing.Size(38, 21);
-            this.rbtnInfoSearchMale.TabIndex = 21;
-            this.rbtnInfoSearchMale.TabStop = true;
-            this.rbtnInfoSearchMale.Text = "男";
-            this.rbtnInfoSearchMale.UseVisualStyleBackColor = true;
+            this.nudPosSearchMoney.Location = new System.Drawing.Point(113, 167);
+            this.nudPosSearchMoney.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.nudPosSearchMoney.Name = "nudPosSearchMoney";
+            this.nudPosSearchMoney.Size = new System.Drawing.Size(195, 23);
+            this.nudPosSearchMoney.TabIndex = 21;
             // 
-            // listPosition
+            // txtPosSearchName
             // 
-            this.listPosition.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader12});
-            this.listPosition.FullRowSelect = true;
-            this.listPosition.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listPosition.Location = new System.Drawing.Point(8, 6);
-            this.listPosition.Name = "listPosition";
-            this.listPosition.Size = new System.Drawing.Size(556, 444);
-            this.listPosition.TabIndex = 1;
-            this.listPosition.UseCompatibleStateImageBehavior = false;
-            this.listPosition.View = System.Windows.Forms.View.Details;
+            this.txtPosSearchName.Location = new System.Drawing.Point(113, 123);
+            this.txtPosSearchName.Name = "txtPosSearchName";
+            this.txtPosSearchName.Size = new System.Drawing.Size(195, 23);
+            this.txtPosSearchName.TabIndex = 21;
             // 
-            // columnHeader9
+            // nudPosSearchDepId
             // 
-            this.columnHeader9.Text = "职位ID";
+            this.nudPosSearchDepId.Location = new System.Drawing.Point(113, 79);
+            this.nudPosSearchDepId.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.nudPosSearchDepId.Name = "nudPosSearchDepId";
+            this.nudPosSearchDepId.Size = new System.Drawing.Size(113, 23);
+            this.nudPosSearchDepId.TabIndex = 33;
             // 
-            // columnHeader10
+            // nudPosSearchId
             // 
-            this.columnHeader10.Text = "所属部门ID";
-            this.columnHeader10.Width = 84;
+            this.nudPosSearchId.Location = new System.Drawing.Point(113, 37);
+            this.nudPosSearchId.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.nudPosSearchId.Name = "nudPosSearchId";
+            this.nudPosSearchId.Size = new System.Drawing.Size(113, 23);
+            this.nudPosSearchId.TabIndex = 21;
             // 
-            // columnHeader11
+            // btnPosSearch
             // 
-            this.columnHeader11.Text = "职位名称";
-            this.columnHeader11.Width = 126;
+            this.btnPosSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPosSearch.Location = new System.Drawing.Point(340, 69);
+            this.btnPosSearch.Name = "btnPosSearch";
+            this.btnPosSearch.Size = new System.Drawing.Size(168, 135);
+            this.btnPosSearch.TabIndex = 32;
+            this.btnPosSearch.Text = "查询";
+            this.btnPosSearch.UseVisualStyleBackColor = true;
             // 
-            // columnHeader12
+            // cboxPosSearchName
             // 
-            this.columnHeader12.Text = "薪酬";
-            this.columnHeader12.Width = 120;
+            this.cboxPosSearchName.AutoSize = true;
+            this.cboxPosSearchName.Location = new System.Drawing.Point(19, 125);
+            this.cboxPosSearchName.Name = "cboxPosSearchName";
+            this.cboxPosSearchName.Size = new System.Drawing.Size(75, 21);
+            this.cboxPosSearchName.TabIndex = 4;
+            this.cboxPosSearchName.Text = "职位名称";
+            this.cboxPosSearchName.UseVisualStyleBackColor = true;
+            // 
+            // cboxPosSearchDepId
+            // 
+            this.cboxPosSearchDepId.AutoSize = true;
+            this.cboxPosSearchDepId.Location = new System.Drawing.Point(19, 81);
+            this.cboxPosSearchDepId.Name = "cboxPosSearchDepId";
+            this.cboxPosSearchDepId.Size = new System.Drawing.Size(88, 21);
+            this.cboxPosSearchDepId.TabIndex = 3;
+            this.cboxPosSearchDepId.Text = "所属部门ID";
+            this.cboxPosSearchDepId.UseVisualStyleBackColor = true;
+            // 
+            // cboxPosSearchId
+            // 
+            this.cboxPosSearchId.AutoSize = true;
+            this.cboxPosSearchId.Location = new System.Drawing.Point(19, 37);
+            this.cboxPosSearchId.Name = "cboxPosSearchId";
+            this.cboxPosSearchId.Size = new System.Drawing.Size(40, 21);
+            this.cboxPosSearchId.TabIndex = 2;
+            this.cboxPosSearchId.Text = "ID";
+            this.cboxPosSearchId.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -1081,64 +1151,6 @@
             this.label20.TabIndex = 0;
             this.label20.Text = "所属部门ID";
             // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.cboxPosSearchMoney);
-            this.groupBox6.Controls.Add(this.nudPosSearchMoney);
-            this.groupBox6.Controls.Add(this.txtPosSearchName);
-            this.groupBox6.Controls.Add(this.nudPosSearchDepId);
-            this.groupBox6.Controls.Add(this.nudPosSearchId);
-            this.groupBox6.Controls.Add(this.btnPosSearch);
-            this.groupBox6.Controls.Add(this.cboxPosSearchName);
-            this.groupBox6.Controls.Add(this.cboxPosSearchDepId);
-            this.groupBox6.Controls.Add(this.cboxPosSearchId);
-            this.groupBox6.Location = new System.Drawing.Point(587, 225);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(522, 225);
-            this.groupBox6.TabIndex = 3;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "查询";
-            // 
-            // btnPosSearch
-            // 
-            this.btnPosSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPosSearch.Location = new System.Drawing.Point(340, 69);
-            this.btnPosSearch.Name = "btnPosSearch";
-            this.btnPosSearch.Size = new System.Drawing.Size(168, 135);
-            this.btnPosSearch.TabIndex = 32;
-            this.btnPosSearch.Text = "查询";
-            this.btnPosSearch.UseVisualStyleBackColor = true;
-            // 
-            // cboxPosSearchName
-            // 
-            this.cboxPosSearchName.AutoSize = true;
-            this.cboxPosSearchName.Location = new System.Drawing.Point(19, 125);
-            this.cboxPosSearchName.Name = "cboxPosSearchName";
-            this.cboxPosSearchName.Size = new System.Drawing.Size(75, 21);
-            this.cboxPosSearchName.TabIndex = 4;
-            this.cboxPosSearchName.Text = "职位名称";
-            this.cboxPosSearchName.UseVisualStyleBackColor = true;
-            // 
-            // cboxPosSearchDepId
-            // 
-            this.cboxPosSearchDepId.AutoSize = true;
-            this.cboxPosSearchDepId.Location = new System.Drawing.Point(19, 81);
-            this.cboxPosSearchDepId.Name = "cboxPosSearchDepId";
-            this.cboxPosSearchDepId.Size = new System.Drawing.Size(88, 21);
-            this.cboxPosSearchDepId.TabIndex = 3;
-            this.cboxPosSearchDepId.Text = "所属部门ID";
-            this.cboxPosSearchDepId.UseVisualStyleBackColor = true;
-            // 
-            // cboxPosSearchId
-            // 
-            this.cboxPosSearchId.AutoSize = true;
-            this.cboxPosSearchId.Location = new System.Drawing.Point(19, 37);
-            this.cboxPosSearchId.Name = "cboxPosSearchId";
-            this.cboxPosSearchId.Size = new System.Drawing.Size(40, 21);
-            this.cboxPosSearchId.TabIndex = 2;
-            this.cboxPosSearchId.Text = "ID";
-            this.cboxPosSearchId.UseVisualStyleBackColor = true;
-            // 
             // nudPosDepId
             // 
             this.nudPosDepId.Location = new System.Drawing.Point(95, 24);
@@ -1151,58 +1163,52 @@
             this.nudPosDepId.Size = new System.Drawing.Size(113, 23);
             this.nudPosDepId.TabIndex = 1;
             // 
-            // nudPosSearchId
+            // listPosition
             // 
-            this.nudPosSearchId.Location = new System.Drawing.Point(113, 37);
-            this.nudPosSearchId.Maximum = new decimal(new int[] {
-            999999,
-            0,
-            0,
-            0});
-            this.nudPosSearchId.Name = "nudPosSearchId";
-            this.nudPosSearchId.Size = new System.Drawing.Size(113, 23);
-            this.nudPosSearchId.TabIndex = 21;
+            this.listPosition.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11,
+            this.columnHeader12});
+            this.listPosition.FullRowSelect = true;
+            this.listPosition.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listPosition.Location = new System.Drawing.Point(8, 6);
+            this.listPosition.Name = "listPosition";
+            this.listPosition.Size = new System.Drawing.Size(556, 444);
+            this.listPosition.TabIndex = 1;
+            this.listPosition.UseCompatibleStateImageBehavior = false;
+            this.listPosition.View = System.Windows.Forms.View.Details;
             // 
-            // nudPosSearchDepId
+            // columnHeader9
             // 
-            this.nudPosSearchDepId.Location = new System.Drawing.Point(113, 79);
-            this.nudPosSearchDepId.Maximum = new decimal(new int[] {
-            999999,
-            0,
-            0,
-            0});
-            this.nudPosSearchDepId.Name = "nudPosSearchDepId";
-            this.nudPosSearchDepId.Size = new System.Drawing.Size(113, 23);
-            this.nudPosSearchDepId.TabIndex = 33;
+            this.columnHeader9.Text = "职位ID";
             // 
-            // txtPosSearchName
+            // columnHeader10
             // 
-            this.txtPosSearchName.Location = new System.Drawing.Point(113, 123);
-            this.txtPosSearchName.Name = "txtPosSearchName";
-            this.txtPosSearchName.Size = new System.Drawing.Size(195, 23);
-            this.txtPosSearchName.TabIndex = 21;
+            this.columnHeader10.Text = "所属部门ID";
+            this.columnHeader10.Width = 84;
             // 
-            // nudPosSearchMoney
+            // columnHeader11
             // 
-            this.nudPosSearchMoney.Location = new System.Drawing.Point(113, 167);
-            this.nudPosSearchMoney.Maximum = new decimal(new int[] {
-            99999999,
-            0,
-            0,
-            0});
-            this.nudPosSearchMoney.Name = "nudPosSearchMoney";
-            this.nudPosSearchMoney.Size = new System.Drawing.Size(195, 23);
-            this.nudPosSearchMoney.TabIndex = 21;
+            this.columnHeader11.Text = "职位名称";
+            this.columnHeader11.Width = 126;
             // 
-            // cboxPosSearchMoney
+            // columnHeader12
             // 
-            this.cboxPosSearchMoney.AutoSize = true;
-            this.cboxPosSearchMoney.Location = new System.Drawing.Point(19, 169);
-            this.cboxPosSearchMoney.Name = "cboxPosSearchMoney";
-            this.cboxPosSearchMoney.Size = new System.Drawing.Size(51, 21);
-            this.cboxPosSearchMoney.TabIndex = 34;
-            this.cboxPosSearchMoney.Text = "薪酬";
-            this.cboxPosSearchMoney.UseVisualStyleBackColor = true;
+            this.columnHeader12.Text = "薪酬";
+            this.columnHeader12.Width = 120;
+            // 
+            // tabEmployeePerformance
+            // 
+            this.tabEmployeePerformance.Controls.Add(this.groupBox7);
+            this.tabEmployeePerformance.Controls.Add(this.groupBox8);
+            this.tabEmployeePerformance.Controls.Add(this.Performance);
+            this.tabEmployeePerformance.Location = new System.Drawing.Point(4, 26);
+            this.tabEmployeePerformance.Name = "tabEmployeePerformance";
+            this.tabEmployeePerformance.Size = new System.Drawing.Size(1121, 467);
+            this.tabEmployeePerformance.TabIndex = 3;
+            this.tabEmployeePerformance.Text = "公司就职信息";
+            this.tabEmployeePerformance.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
@@ -1219,6 +1225,42 @@
             this.groupBox7.TabIndex = 5;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "查询";
+            // 
+            // nudPerSearchPerformance
+            // 
+            this.nudPerSearchPerformance.Location = new System.Drawing.Point(109, 155);
+            this.nudPerSearchPerformance.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.nudPerSearchPerformance.Name = "nudPerSearchPerformance";
+            this.nudPerSearchPerformance.Size = new System.Drawing.Size(151, 23);
+            this.nudPerSearchPerformance.TabIndex = 35;
+            // 
+            // nudPerSearchPosId
+            // 
+            this.nudPerSearchPosId.Location = new System.Drawing.Point(109, 95);
+            this.nudPerSearchPosId.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.nudPerSearchPosId.Name = "nudPerSearchPosId";
+            this.nudPerSearchPosId.Size = new System.Drawing.Size(151, 23);
+            this.nudPerSearchPosId.TabIndex = 34;
+            // 
+            // nudPerSearchId
+            // 
+            this.nudPerSearchId.Location = new System.Drawing.Point(109, 35);
+            this.nudPerSearchId.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.nudPerSearchId.Name = "nudPerSearchId";
+            this.nudPerSearchId.Size = new System.Drawing.Size(151, 23);
+            this.nudPerSearchId.TabIndex = 33;
             // 
             // btnPerSearch
             // 
@@ -1277,6 +1319,42 @@
             this.groupBox8.Size = new System.Drawing.Size(522, 213);
             this.groupBox8.TabIndex = 4;
             this.groupBox8.TabStop = false;
+            // 
+            // nudPerPerformance
+            // 
+            this.nudPerPerformance.Location = new System.Drawing.Point(78, 147);
+            this.nudPerPerformance.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.nudPerPerformance.Name = "nudPerPerformance";
+            this.nudPerPerformance.Size = new System.Drawing.Size(151, 23);
+            this.nudPerPerformance.TabIndex = 23;
+            // 
+            // nudPerPosId
+            // 
+            this.nudPerPosId.Location = new System.Drawing.Point(78, 87);
+            this.nudPerPosId.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.nudPerPosId.Name = "nudPerPosId";
+            this.nudPerPosId.Size = new System.Drawing.Size(151, 23);
+            this.nudPerPosId.TabIndex = 22;
+            // 
+            // nudPerId
+            // 
+            this.nudPerId.Location = new System.Drawing.Point(78, 27);
+            this.nudPerId.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.nudPerId.Name = "nudPerId";
+            this.nudPerId.Size = new System.Drawing.Size(151, 23);
+            this.nudPerId.TabIndex = 21;
             // 
             // btnPerDelete
             // 
@@ -1374,78 +1452,6 @@
             this.columnHeader15.Text = "业绩";
             this.columnHeader15.Width = 104;
             // 
-            // nudPerId
-            // 
-            this.nudPerId.Location = new System.Drawing.Point(78, 27);
-            this.nudPerId.Maximum = new decimal(new int[] {
-            999999,
-            0,
-            0,
-            0});
-            this.nudPerId.Name = "nudPerId";
-            this.nudPerId.Size = new System.Drawing.Size(151, 23);
-            this.nudPerId.TabIndex = 21;
-            // 
-            // nudPerPosId
-            // 
-            this.nudPerPosId.Location = new System.Drawing.Point(78, 87);
-            this.nudPerPosId.Maximum = new decimal(new int[] {
-            999999,
-            0,
-            0,
-            0});
-            this.nudPerPosId.Name = "nudPerPosId";
-            this.nudPerPosId.Size = new System.Drawing.Size(151, 23);
-            this.nudPerPosId.TabIndex = 22;
-            // 
-            // nudPerPerformance
-            // 
-            this.nudPerPerformance.Location = new System.Drawing.Point(78, 147);
-            this.nudPerPerformance.Maximum = new decimal(new int[] {
-            1410065407,
-            2,
-            0,
-            0});
-            this.nudPerPerformance.Name = "nudPerPerformance";
-            this.nudPerPerformance.Size = new System.Drawing.Size(151, 23);
-            this.nudPerPerformance.TabIndex = 23;
-            // 
-            // nudPerSearchPerformance
-            // 
-            this.nudPerSearchPerformance.Location = new System.Drawing.Point(109, 155);
-            this.nudPerSearchPerformance.Maximum = new decimal(new int[] {
-            1410065407,
-            2,
-            0,
-            0});
-            this.nudPerSearchPerformance.Name = "nudPerSearchPerformance";
-            this.nudPerSearchPerformance.Size = new System.Drawing.Size(151, 23);
-            this.nudPerSearchPerformance.TabIndex = 35;
-            // 
-            // nudPerSearchPosId
-            // 
-            this.nudPerSearchPosId.Location = new System.Drawing.Point(109, 95);
-            this.nudPerSearchPosId.Maximum = new decimal(new int[] {
-            999999,
-            0,
-            0,
-            0});
-            this.nudPerSearchPosId.Name = "nudPerSearchPosId";
-            this.nudPerSearchPosId.Size = new System.Drawing.Size(151, 23);
-            this.nudPerSearchPosId.TabIndex = 34;
-            // 
-            // nudPerSearchId
-            // 
-            this.nudPerSearchId.Location = new System.Drawing.Point(109, 35);
-            this.nudPerSearchId.Maximum = new decimal(new int[] {
-            999999,
-            0,
-            0,
-            0});
-            this.nudPerSearchId.Name = "nudPerSearchId";
-            this.nudPerSearchId.Size = new System.Drawing.Size(151, 23);
-            this.nudPerSearchId.TabIndex = 33;
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1477,26 +1483,26 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.tabCompanyPosition.ResumeLayout(false);
-            this.tabEmployeePerformance.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPosSearchMoney)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPosSearchDepId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPosSearchId)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPosMoney)).EndInit();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPosDepId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPosSearchId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPosSearchDepId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPosSearchMoney)).EndInit();
+            this.tabEmployeePerformance.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPerId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPerPosId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPerPerformance)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPerSearchPerformance)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPerSearchPosId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPerSearchId)).EndInit();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPerPerformance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPerPosId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPerId)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1541,8 +1547,8 @@
         private System.Windows.Forms.CheckBox cboxInfoSex;
         private System.Windows.Forms.CheckBox cboxInfoName;
         private System.Windows.Forms.CheckBox cboxInfoId;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cboxInfoIdCard;
+        private System.Windows.Forms.CheckBox cboxInfoBirth;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;

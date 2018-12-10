@@ -17,7 +17,7 @@ namespace EmployeeInfoSystem.Model
         public int employeeId { get; set; }
         public string employeeName { get; set; }
         public int employeeSex { get; set; }
-        public int employeePhone { get; set; }
+        public string employeePhone { get; set; }
         public Nullable<System.DateTime> employeeBir { get; set; }
         public string employeeIdentity { get; set; }
     }

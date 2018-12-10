@@ -15,7 +15,7 @@ namespace EmployeeInfoSystem.Model
     public partial class employeePerformance
     {
         public int employeeId { get; set; }
-        public string positionId { get; set; }
+        public int positionId { get; set; }
         public Nullable<double> performance { get; set; }
     }
 }

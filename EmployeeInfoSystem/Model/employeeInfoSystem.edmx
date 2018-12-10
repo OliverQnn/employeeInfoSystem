@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="employeeInfoSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="employeeInfoSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="companyPosition">
           <Key>
             <PropertyRef Name="positionId" />
@@ -28,7 +28,7 @@
           <Property Name="employeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="employeeName" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="employeeSex" Type="int" Nullable="false" />
-          <Property Name="employeePhone" Type="int" Nullable="false" />
+          <Property Name="employeePhone" Type="nvarchar" MaxLength="11" Nullable="false" />
           <Property Name="employeeBir" Type="datetime" />
           <Property Name="employeeIdentity" Type="nvarchar" MaxLength="18" Nullable="false" />
         </EntityType>
@@ -37,7 +37,7 @@
             <PropertyRef Name="employeeId" />
           </Key>
           <Property Name="employeeId" Type="int" Nullable="false" />
-          <Property Name="positionId" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="positionId" Type="int" Nullable="false" />
           <Property Name="performance" Type="float" />
         </EntityType>
         <EntityContainer Name="employeeInfoSystemModelStoreContainer">
@@ -74,7 +74,7 @@
           <Property Name="employeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="employeeName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="employeeSex" Type="Int32" Nullable="false" />
-          <Property Name="employeePhone" Type="Int32" Nullable="false" />
+          <Property Name="employeePhone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="employeeBir" Type="DateTime" Precision="3" />
           <Property Name="employeeIdentity" Type="String" MaxLength="18" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
@@ -83,7 +83,7 @@
             <PropertyRef Name="employeeId" />
           </Key>
           <Property Name="employeeId" Type="Int32" Nullable="false" />
-          <Property Name="positionId" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="positionId" Type="Int32" Nullable="false" />
           <Property Name="performance" Type="Double" />
         </EntityType>
         <EntityContainer Name="employeeInfoSystemEntities" annotation:LazyLoadingEnabled="true">
