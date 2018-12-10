@@ -145,6 +145,8 @@
             this.Performance = new System.Windows.Forms.ListView();
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
             this.tabEmployeeInfo.SuspendLayout();
@@ -757,10 +759,10 @@
             this.tabDepartment.Controls.Add(this.groupBox4);
             this.tabDepartment.Controls.Add(this.groupBox3);
             this.tabDepartment.Controls.Add(this.listDepartment);
-            this.tabDepartment.Location = new System.Drawing.Point(4, 26);
+            this.tabDepartment.Location = new System.Drawing.Point(4, 22);
             this.tabDepartment.Name = "tabDepartment";
             this.tabDepartment.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDepartment.Size = new System.Drawing.Size(1121, 467);
+            this.tabDepartment.Size = new System.Drawing.Size(1121, 471);
             this.tabDepartment.TabIndex = 1;
             this.tabDepartment.Text = "公司部门";
             this.tabDepartment.UseVisualStyleBackColor = true;
@@ -932,10 +934,10 @@
             this.tabCompanyPosition.Controls.Add(this.groupBox6);
             this.tabCompanyPosition.Controls.Add(this.groupBox5);
             this.tabCompanyPosition.Controls.Add(this.listPosition);
-            this.tabCompanyPosition.Location = new System.Drawing.Point(4, 26);
+            this.tabCompanyPosition.Location = new System.Drawing.Point(4, 22);
             this.tabCompanyPosition.Name = "tabCompanyPosition";
             this.tabCompanyPosition.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCompanyPosition.Size = new System.Drawing.Size(1121, 467);
+            this.tabCompanyPosition.Size = new System.Drawing.Size(1121, 471);
             this.tabCompanyPosition.TabIndex = 2;
             this.tabCompanyPosition.Text = "公司职务";
             this.tabCompanyPosition.UseVisualStyleBackColor = true;
@@ -1238,6 +1240,12 @@
             // 
             // nudPerSearchPerformance
             // 
+            this.nudPerSearchPerformance.DecimalPlaces = 2;
+            this.nudPerSearchPerformance.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
             this.nudPerSearchPerformance.Location = new System.Drawing.Point(109, 155);
             this.nudPerSearchPerformance.Maximum = new decimal(new int[] {
             1410065407,
@@ -1281,6 +1289,7 @@
             this.btnPerSearch.TabIndex = 32;
             this.btnPerSearch.Text = "查询";
             this.btnPerSearch.UseVisualStyleBackColor = true;
+            this.btnPerSearch.Click += new System.EventHandler(this.btnPerSearch_Click);
             // 
             // cboxPerSearchPerformance
             // 
@@ -1332,6 +1341,12 @@
             // 
             // nudPerPerformance
             // 
+            this.nudPerPerformance.DecimalPlaces = 2;
+            this.nudPerPerformance.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
             this.nudPerPerformance.Location = new System.Drawing.Point(78, 147);
             this.nudPerPerformance.Maximum = new decimal(new int[] {
             1410065407,
@@ -1375,6 +1390,7 @@
             this.btnPerDelete.TabIndex = 20;
             this.btnPerDelete.Text = "删除选中项";
             this.btnPerDelete.UseVisualStyleBackColor = true;
+            this.btnPerDelete.Click += new System.EventHandler(this.btnPerDelete_Click);
             // 
             // btnPerEdit
             // 
@@ -1385,6 +1401,7 @@
             this.btnPerEdit.TabIndex = 19;
             this.btnPerEdit.Text = "修改选中项";
             this.btnPerEdit.UseVisualStyleBackColor = true;
+            this.btnPerEdit.Click += new System.EventHandler(this.btnPerEdit_Click);
             // 
             // btnPerLoad
             // 
@@ -1395,6 +1412,7 @@
             this.btnPerLoad.TabIndex = 18;
             this.btnPerLoad.Text = "加载选中项";
             this.btnPerLoad.UseVisualStyleBackColor = true;
+            this.btnPerLoad.Click += new System.EventHandler(this.btnPerLoad_Click);
             // 
             // btnPerAdd
             // 
@@ -1405,6 +1423,7 @@
             this.btnPerAdd.TabIndex = 11;
             this.btnPerAdd.Text = "添加";
             this.btnPerAdd.UseVisualStyleBackColor = true;
+            this.btnPerAdd.Click += new System.EventHandler(this.btnPerAdd_Click);
             // 
             // label24
             // 
@@ -1438,6 +1457,8 @@
             this.Performance.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader13,
             this.columnHeader14,
+            this.columnHeader16,
+            this.columnHeader17,
             this.columnHeader15});
             this.Performance.FullRowSelect = true;
             this.Performance.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
@@ -1454,8 +1475,18 @@
             // 
             // columnHeader14
             // 
+            this.columnHeader14.DisplayIndex = 2;
             this.columnHeader14.Text = "职位编号";
             this.columnHeader14.Width = 78;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.DisplayIndex = 1;
+            this.columnHeader16.Text = "职工姓名";
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "职位名称";
             // 
             // columnHeader15
             // 
@@ -1637,6 +1668,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
     }
 }
 
